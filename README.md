@@ -6,4 +6,4 @@ Project was initially envisioned as a remodel of the Digital Skills site, incorp
 customizable flash cards/trivia games
 searchable document database
 
-// Lorem Ipsum etc etc for further readme
+Quizes folder contains flashcard game module 
