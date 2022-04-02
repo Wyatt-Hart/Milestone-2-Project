@@ -9,7 +9,7 @@ export default function LessonHub() {
     const [ lesson, setLesson ] = useState(1)
     
     const prevClick = () => {
-        if(lesson > 2){
+        if(lesson > 1){
             setLesson(lesson - 1)
         }
     }

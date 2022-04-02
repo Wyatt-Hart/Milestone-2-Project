@@ -4,6 +4,10 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './fonts/Alt_Retro_Thin.ttf';
+import './fonts/Alt_Retro_Regular.ttf';
+import './fonts/Atari_Classic_Chunky.ttf';
+
 
 ReactDOM.render(
   <BrowserRouter>

@@ -1,36 +1,124 @@
+/*FONTS & KEYFRAMES*/
+@font-face {
+    font-family: "AltRetroThin";
+    src: local("AltRetroThin"),
+      url("./fonts/Alt_Retro_Thin.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "AltRetroRegular";
+    src: local("AltRetroRegular"),
+      url("./fonts/Alt_Retro_Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "AtariClassicChunky";
+    src: local("AtariClassicChunky"),
+      url("./fonts/Atari_Classic_Chunky.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 20px #2d9da9;
+    }
+    to {
+      text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    }
+  }
+
+/*NAVBAR*/
 nav ul li {
     list-style: none;
-    display: inline-block;
+    display: inline-flex;
     margin: 2vw;
 }
+
 nav ul li a {
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 3em;
+    font-family: AltRetroThin;
+    font-weight: 500;
+    -webkit-text-stroke: 0.8px #00FF66;
+    animation: glow 2s ease-in-out infinite alternate;
+     /*background: -webkit-linear-gradient(#FFFF33, #FF0000);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/ 
 }
-nav{
+
+nav {
+    justify-content: space-around;
     text-align: center;
-    margin-top:-3vh
+    margin-top:-4.9vh;
+    margin-bottom:-6.3vh;
+    background-color: #212121;
+    /*background-image: linear-gradient(#013220, #013220, #1A3805, #013220, #013220, #013220, #013220, #013220, #1A3805, #1B3905, #1B3905, #1B3905, #1B3905, #31961F,#55620F, #1B3905,  #1A3805, #1B3905, #1A3805, #1B3905, #1A3805, #1B3905, #1B3905, #013220, #013220, #013220);*/
 }
+
+/*HOME COMPONENT*/
+.home {
+    background-image: linear-gradient(#C8D8FC, #92DAFC, #92DAFC, #5181ED, #5181ED, #4938C1, #25107D, #C8D8FC, #999EFC,  #999EFC, #999EFC, #5181ED, #4938C1, #4938C1, #26117D, #C8D8FC, #999EFC, #999EFC, #5181ED, #5181ED, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #4938C1, #26117D, #26117D, #FCCDD1, #FC9F9F, #FC9F9F, #FC9F9F, #DA130F, #A71511, #A71511, #A71511, #FCCDD1, #FC9F9F, #FC9F9F, #E0A352, #BB5E25, #DA130F, #A71511, #501604, #FCE8A1, #FCE8A1, #E0A352, #F09918, #A9A031, #BB5E25, #55620F, #501603, #FCC465, #FCC465, #E0A352, #E0A352, #BB5E25, #BB5E25, #4F1503, #4F1503,#E9FC7E, #E0E434, #B2E74C, #E0A352, #A9A031, #05510E, #1A3805, #1A3805, #F0FC50, #D4E048, #DCE8C3, #A9A031, #31961F, #55620F, #05510E, #1B3905, #1B3905);    
+    text-align: center;
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
+    color: white;
+    -webkit-text-stroke: 0.2px black;
+    padding-top: 1em;
+}
+
+.home-img {
+   
+}
+
+.credit {
+    text-decoration: none;
+    margin-bottom: 0.5em;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #212121;
+}
+
+/*LESSONS-HUB COMPONENT*/
+.lesson-main {
+    background-image: linear-gradient(#C8D8FC, #92DAFC, #92DAFC, #5181ED, #5181ED, #4938C1, #25107D, #C8D8FC, #999EFC,  #999EFC, #999EFC, #5181ED, #4938C1, #4938C1, #26117D, #C8D8FC, #999EFC, #999EFC, #5181ED, #5181ED, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #4938C1, #26117D, #26117D, #FCCDD1, #FC9F9F, #FC9F9F, #FC9F9F, #DA130F, #A71511, #A71511, #A71511, #FCCDD1, #FC9F9F, #FC9F9F, #E0A352, #BB5E25, #DA130F, #A71511, #501604, #FCE8A1, #FCE8A1, #E0A352, #F09918, #A9A031, #BB5E25, #55620F, #501603, #FCC465, #FCC465, #E0A352, #E0A352, #BB5E25, #BB5E25, #4F1503, #4F1503,#E9FC7E, #E0E434, #B2E74C, #E0A352, #A9A031, #05510E, #1A3805, #1A3805, #F0FC50, #D4E048, #DCE8C3, #A9A031, #31961F, #55620F, #05510E, #1B3905, #1B3905);  
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
+    color: #FAF9F6;
+    -webkit-text-stroke: 0.2px black;
+    padding-top: 2.8em;
+}
+
 .lesson-container {
     display: inline-flex;
     width: 70vw;
     justify-content: space-around;
     text-align: center;
+    margin-top: 1vw;
+    margin-bottom: 3vw;
+    
 }
 .lesson-img{
-    width:8vw;
-    margin-top: 1vw;
+    width:10vw;
+    margin-top: 0vw;
 }
+
 .prev-btn-img, .next-btn-img {
     margin-top: 1vw;
     width: 6vw;
 }
+
 .lesson-container a {
     background-color: skyblue;
     border: 1px solid black;
     border-radius: 100%;
     height: 10vw;
     width: 10vw;
+    margin-top: 2vw;
+    margin-bottom: 8vh;
 }
 
 .avatar-img {
@@ -48,12 +136,16 @@ nav{
 
 .user-info {
     width: 15vw;
-    border: 1px solid black
+    border: 1px solid black;
+    background-color: #A9A9A9;
 }
+
 .user-info p {
     display: inline-block;
     margin-left: 1vw;
+    background-color: purple;
 }
+
 .xp-bar {
     position: absolute;
     width: 14%;
@@ -62,7 +154,9 @@ nav{
     margin-left: 0.3vw;
     height: 1vh;
     border: 1px solid black;
+    background-color: green;
 }
+
 .xp-bar img {
     position: relative;
     top: 0.4vh;
@@ -73,16 +167,43 @@ nav{
     width: 70%;
     height: 3vh;
 }
+
 button {
     width: 5vw;
     border: none;
+    background-color: grey;
 }
-.selected-subject {
-    font-size: 1.5rem;
+
+/*GAMES-HUB COMPONENT*/
+.games-hub {
+    background-image: linear-gradient(#C8D8FC, #92DAFC, #92DAFC, #5181ED, #5181ED, #4938C1, #25107D, #C8D8FC, #999EFC,  #999EFC, #999EFC, #5181ED, #4938C1, #4938C1, #26117D, #C8D8FC, #999EFC, #999EFC, #5181ED, #5181ED, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #4938C1, #26117D, #26117D, #FCCDD1, #FC9F9F, #FC9F9F, #FC9F9F, #DA130F, #A71511, #A71511, #A71511, #FCCDD1, #FC9F9F, #FC9F9F, #E0A352, #BB5E25, #DA130F, #A71511, #501604, #FCE8A1, #FCE8A1, #E0A352, #F09918, #A9A031, #BB5E25, #55620F, #501603, #FCC465, #FCC465, #E0A352, #E0A352, #BB5E25, #BB5E25, #4F1503, #4F1503,#E9FC7E, #E0E434, #B2E74C, #E0A352, #A9A031, #05510E, #1A3805, #1A3805, #F0FC50, #D4E048, #DCE8C3, #A9A031, #31961F, #55620F, #05510E, #1B3905, #1B3905);   
+    padding-top: 4vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    font-family: AtariClassicChunky;
+    color: white;
+    -webkit-text-stroke: 0.2px black;
+    font-size: 0.8em;
 }
-.subject {
-    font-size: 2.5rem;
+
+/*LESSON-VIEW COMPONENT*/
+.lesson-view {
+    background-image: linear-gradient(#C8D8FC, #92DAFC, #92DAFC, #5181ED, #5181ED, #4938C1, #25107D, #C8D8FC, #999EFC,  #999EFC, #999EFC, #5181ED, #4938C1, #4938C1, #26117D, #C8D8FC, #999EFC, #999EFC, #5181ED, #5181ED, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #4938C1, #26117D, #26117D, #FCCDD1, #FC9F9F, #FC9F9F, #FC9F9F, #DA130F, #A71511, #A71511, #A71511, #FCCDD1, #FC9F9F, #FC9F9F, #E0A352, #BB5E25, #DA130F, #A71511, #501604, #FCE8A1, #FCE8A1, #E0A352, #F09918, #A9A031, #BB5E25, #55620F, #501603, #FCC465, #FCC465, #E0A352, #E0A352, #BB5E25, #BB5E25, #4F1503, #4F1503,#E9FC7E, #E0E434, #B2E74C, #E0A352, #A9A031, #05510E, #1A3805, #1A3805, #F0FC50, #D4E048, #DCE8C3, #A9A031, #31961F, #55620F, #05510E, #1B3905, #1B3905);     
+    text-align: center;
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
+    color: white;
+    -webkit-text-stroke: 0.2px black;
+    padding-top: 1em;
 }
-.lesson-name {
-    font-size: 1.25rem;
+
+/*GAME-VIEW COMPONENT*/
+.game-view {
+    background-image: linear-gradient(#C8D8FC, #92DAFC, #92DAFC, #5181ED, #5181ED, #4938C1, #25107D, #C8D8FC, #999EFC,  #999EFC, #999EFC, #5181ED, #4938C1, #4938C1, #26117D, #C8D8FC, #999EFC, #999EFC, #5181ED, #5181ED, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #C25BEE, #4938C1, #4938C1, #26117D, #EB97FC, #EB97FC, #EB97FC, #C25BEE, #C25BEE, #4938C1, #26117D, #26117D, #FCCDD1, #FC9F9F, #FC9F9F, #FC9F9F, #DA130F, #A71511, #A71511, #A71511, #FCCDD1, #FC9F9F, #FC9F9F, #E0A352, #BB5E25, #DA130F, #A71511, #501604, #FCE8A1, #FCE8A1, #E0A352, #F09918, #A9A031, #BB5E25, #55620F, #501603, #FCC465, #FCC465, #E0A352, #E0A352, #BB5E25, #BB5E25, #4F1503, #4F1503,#E9FC7E, #E0E434, #B2E74C, #E0A352, #A9A031, #05510E, #1A3805, #1A3805, #F0FC50, #D4E048, #DCE8C3, #A9A031, #31961F, #55620F, #05510E, #1B3905, #1B3905);    
+    text-align: center;
+    font-family: AtariClassicChunky;
+    font-size: 0.8em;
+    color: white;
+    -webkit-text-stroke: 0.2px black;
+    padding-top: 1em;
 }
